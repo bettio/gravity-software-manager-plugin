@@ -1,0 +1,14 @@
+{
+   "interface": "com.ispirata.Hemera.SoftwareManagement.RemoteUpdate",
+   "version_major": 1,
+   "version_minor": 0,
+   "type": "properties",
+   "quality": "consumer",
+   "mappings": [
+       {
+           "path": "/targetVersion",
+           "type": "string",
+           "allow_unset": true
+       }
+   ]
+}

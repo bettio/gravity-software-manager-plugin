@@ -1,0 +1,21 @@
+[Unit]
+Description=Gravity Software Manager Zypp Worker
+After=gravity-center.service
+
+[Service]
+Type=notify
+User=root
+
+ExecStart=@HA_TOOLS_DIR@/gravity-software-manager-zypp-worker
+
+TimeoutStartSec=10s
+TimeoutStopSec=20s
+
+[Exec]
+OOMScoreAdjust=-100
+Nice=18
+IOSchedulingClass=idle
+IOSchedulingPriority=6
+
+[Install]
+Alias=gravity-software-manager-backend.service

@@ -1,0 +1,48 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="com.ispirata.Hemera.SoftwareManager.Backend">
+    <method name="listUpdates">
+        <arg name="applicationUpdates" type="ay" direction="out" />
+    </method>
+    <method name="listInstalledApplications">
+        <arg name="applications" type="ay" direction="out" />
+    </method>
+    <method name="listRepositories">
+        <arg name="repositories" type="ay" direction="out" />
+    </method>
+
+    <method name="addRepository">
+        <arg name="name" type="s" direction="in" />
+        <arg name="url" type="as" direction="in" />
+    </method>
+    <method name="refreshRepositories">
+    </method>
+    <method name="removeRepository">
+        <arg name="name" type="s" direction="in" />
+    </method>
+
+    <method name="downloadApplicationUpdates">
+        <arg name="applications" type="ay" direction="in" />
+    </method>
+    <method name="updateApplications">
+        <arg name="applications" type="ay" direction="in" />
+    </method>
+    <method name="updateSystem">
+        <arg name="repoPath" type="s" direction="in" />
+    </method>
+
+    <method name="installApplications">
+        <arg name="applications" type="ay" direction="in" />
+    </method>
+    <method name="removeApplications">
+        <arg name="applications" type="ay" direction="in" />
+    </method>
+    <method name="installLocalPackage">
+        <arg name="localPackage" type="s" direction="in" />
+    </method>
+
+    <method name="setSubscribedToProgress">
+        <arg name="subscribed" type="b" direction="in" />
+    </method>
+  </interface>
+</node>

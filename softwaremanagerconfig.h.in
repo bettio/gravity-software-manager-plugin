@@ -1,0 +1,16 @@
+#ifndef SOFTWAREMANAGERCONFIG_H
+#define SOFTWAREMANAGERCONFIG_H
+
+namespace StaticConfig {
+
+Q_DECL_CONSTEXPR QLatin1String configGravityPath() { return QLatin1String("@GRAVITY_CONFIG_DIR@"); }
+Q_DECL_CONSTEXPR QLatin1String hemeraServicesPath() { return QLatin1String("@HEMERA_SERVICE_DIR@"); }
+Q_DECL_CONSTEXPR QLatin1String binInstallDir() { return QLatin1String("@GRAVITY_BIN_DIR@"); }
+Q_DECL_CONSTEXPR QLatin1String softwareUpdateCacheDir() { return QLatin1String("/var/cache/hemera/software-update/"); }
+constexpr int softwareManagerPluginMajorVersion() { return @GRAVITY_SOFTWARE_MANAGER_PLUGIN_MAJOR_VERSION@; }
+constexpr int softwareManagerPluginMinorVersion() { return @GRAVITY_SOFTWARE_MANAGER_PLUGIN_MINOR_VERSION@; }
+constexpr int softwareManagerPluginReleaseVersion() { return @GRAVITY_SOFTWARE_MANAGER_PLUGIN_RELEASE_VERSION@; }
+
+}
+
+#endif
